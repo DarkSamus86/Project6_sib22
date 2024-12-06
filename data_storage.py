@@ -8,7 +8,7 @@ def save_to_json(data):
     Сохраняет данные в JSON файл.
     :param data: словарь с данными
     """
-    with open(DATA_FILE, "w") as file:
+    with open(DATA_FILE, "w", encoding='utf-8') as file:
         json.dump(data, file, indent=4, ensure_ascii=False)
     print(f"Данные сохранены в файл {DATA_FILE}.")
 
