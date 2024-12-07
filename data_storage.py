@@ -18,7 +18,7 @@ def load_from_json():
     :return: словарь с данными или пустой словарь
     """
     if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, "r") as file:
+        with open(DATA_FILE, "r", encoding='utf-8') as file:
             try:
                 return json.load(file)
             except json.JSONDecodeError:
